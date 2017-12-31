@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+}
+  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica Neue;
+}
+
+.ReactTable {
+  margin-top: 100px
+}
+
+
+.container {
+  width: 500px;
+}
+
+input.original {
+  box-shadow: 0 0 5px 1px blue;
+}
+
+input.active:valid {
+  box-shadow: 0 0 5px 1px green;
+}
+
+input.active:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  appearance: none;
+  margin: 0; 
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
