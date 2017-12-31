@@ -20,7 +20,7 @@ class Main extends Component {
 
     componentDidMount() {
         let num = this.props.location.state.num;
-        let url = "http://localhost:3000/" + num;
+        let url = "https://fierce-falls-36128.herokuapp.com/" + num;
         fetch(url)
          .then(response => response.json())
          .then(data => {
