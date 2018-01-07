@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './master.css';
+import "./master.css";
 
 class App extends Component {
 
@@ -26,51 +26,25 @@ class App extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-   /*
-    console.log('component state', JSON.stringify(this.state));
-
-    if (!this.showFormErrors()) {
-      alert('form is invalid: do not submit');
-    } else {
-      alert('form is valid: submit');
-    }
-   */
-        console.log("E", e.target.num.value);
+        console.log("sdf", typeof e.target.num.value);
         this.props.history.push({
             pathname: "/data",
-            state: {
-                "num": e.target.num.value
-            }
+            num: Number(e.target.num.value)
         });
-    }
-
-    showFormErrors() {
-        console.log("sdfdf");
-        const inputs = document.querySelectorAll("input");
-        let isFormValid = true;
-
-        inputs.forEach(input => {
-            input.classList.add("active");
-
-            const isInputValid = this.showInputError(input.name);
-
-            if (!isInputValid) {
-                isFormValid = false;
-            }
-        });
-
-        return isFormValid;
     }
 
     showInputError(refName) {
-        const validity = this.refs[refName].validity;
+        const validity = this[refName].validity;
         const label = document.getElementById(`${refName}Label`).textContent;
         const error = document.getElementById(`${refName}Error`);
 
         if (!validity.valid) {
             if (validity.valueMissing) {
-                error.textContent = `${label} is a required field`;
+                error.textContent = `${label} is a required numeric field`;
             } else if (validity.typeMismatch) {
+            /*
+             * For browsers which fire a change event on text input
+             */
                 error.textContent = `${label} should be a number`;
             }
             return false;
@@ -89,7 +63,7 @@ class App extends Component {
             <input className="original"
               type="number"
               name="num"
-              ref="num"
+              ref={ n => { this.num = n; }}
               value={ this.state.num }
               onChange={ this.handleChange }
               required />
