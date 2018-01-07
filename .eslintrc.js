@@ -30,6 +30,12 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        "react/prop-types": [
+            2,
+            {
+               ignore: ["history"]
+            }
         ]
     }
 };
