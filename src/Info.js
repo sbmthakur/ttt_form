@@ -20,10 +20,18 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        let num = this.props.location.state.num;
+
+        function handleErrors(response) {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response.json();
+        }
+
+        let num = this.props.location.num;
         let url = "https://fierce-falls-36128.herokuapp.com/" + num;
         fetch(url)
-         .then(response => response.json())
+         .then(handleErrors)
          .then(data => {
              this.setState({
                  "data": data,
@@ -33,6 +41,11 @@ class Main extends Component {
                   */
                  "loading": false
              });
+         })
+         .catch(error => {
+             console.log(`${error}`);
+             alert("Something went wrong!");
+             this.props.history.push("/");
          });
     }
 
