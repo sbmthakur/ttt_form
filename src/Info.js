@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 //import library and CSS for React Table 
 import ReactTable from "react-table";
 import "react-table/react-table.css";
@@ -66,5 +67,19 @@ class Main extends Component {
         );
     }
 }
+
+Main.propTypes = {
+
+    location: PropTypes.shape({
+        num: PropTypes.number.isRequired,
+    }),
+};
+
+Main.defaultProps = {
+
+    location: {
+        num: 0,
+    },
+};
 
 export default Main;
