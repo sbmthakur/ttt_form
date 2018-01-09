@@ -45,12 +45,20 @@ And then, input a number.
 * react - For basic components
 * react-router - For handling routes
 * prop-types - For type checking of `props`
-* react-table - For providing the table in result page
+* react-table - For providing the table in result page alongwith filter
 * eslint-plugin-react - For linting code
 
 #### Screenshots
-# Input = 4
+##### Input = 4
 ![Input = 4](/screenshots/Input_4.png)
 
+##### Result with Input = 4
+![Result for Input = 4](/screenshots/Result_4.png)
+
+##### Input = 100
+![Input = 100](/screenshots/Input_100.png)
+
+##### Result with Input = 100 and filter usage
+![Result for Input = 100](/screenshots/Result_100_Filter.png)
 Please report any issues that you may encounter. Suggestions are welcome.
 
