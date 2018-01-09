@@ -48,5 +48,9 @@ And then, input a number.
 * react-table - For providing the table in result page
 * eslint-plugin-react - For linting code
 
+#### Screenshots
+
+![Input = 4](/screenshots/Input_4.png)
+
 Please report any issues that you may encounter. Suggestions are welcome.
 
