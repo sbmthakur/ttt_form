@@ -50,7 +50,7 @@ And then, input a number.
 
 #### Screenshots
 
-![Input = 4](/screenshots/Input_4.png "Input = 4")
+![Input = 4](/screenshots/Input_4.png?raw=true "Input = 4")
 
 Please report any issues that you may encounter. Suggestions are welcome.
 
