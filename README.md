@@ -49,8 +49,8 @@ And then, input a number.
 * eslint-plugin-react - For linting code
 
 #### Screenshots
-
-![Input = 4](/screenshots/Input_4.png?raw=true "Input = 4")
+# Input = 4
+![Input = 4](/screenshots/Input_4.png)
 
 Please report any issues that you may encounter. Suggestions are welcome.
 
