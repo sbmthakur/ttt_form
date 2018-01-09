@@ -26,7 +26,6 @@ class App extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log("sdf", typeof e.target.num.value);
         this.props.history.push({
             pathname: "/data",
             num: Number(e.target.num.value)
